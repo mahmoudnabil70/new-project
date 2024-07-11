@@ -37,6 +37,9 @@ sudo apt install ansible -y
 #Add docker to sudo group
 echo "--------------------Add Docker to Sudo group--------------------"
 sudo groupadd docker && sudo usermod -aG docker $USER && newgrp docker && sudo chmod 777 /var/run/docker.sock
+#docker-compose
+-------------------------install docker-compose------------------------
+sudo apt  install docker-compose 
 #Show Jenkins Password
 echo "--------------------Jenkins Password--------------------"
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
