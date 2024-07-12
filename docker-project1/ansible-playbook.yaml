@@ -19,11 +19,8 @@
       command: docker build -t mahmoudnabil70/testpipline .
 
     - name: Push Image to dockerhub
-      command: docker push mahmoudnabil70/testpipline:tagname
+      command: docker push mahmoudnabil70/testpipline
 
-    - name: run container
-<<<<<<< HEAD
+    - name: run containe
       command: ocker run -d --name web-container -p 8080:80 mahmoudnabil70/testpipline-image
-=======
       command: docker run -d --name web-container -p 8080:80 mahmoudnabil70/testpipline-image
->>>>>>> 801fd60021de125311b057afd3c3a6fde488ee46
