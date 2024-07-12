@@ -22,4 +22,8 @@
       command: docker push mahmoudnabil70/testpipline:tagname
 
     - name: run container
+<<<<<<< HEAD
       command: ocker run -d --name web-container -p 8080:80 mahmoudnabil70/testpipline:tagname
+=======
+      command: docker run -d --name web-container -p 8080:80 mahmoudnabil70/testpipline:tagname
+>>>>>>> 801fd60021de125311b057afd3c3a6fde488ee46
