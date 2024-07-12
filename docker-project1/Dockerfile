@@ -1,3 +1,3 @@
 FROM nginx:alpine3.19
 
-COPY ./comingsoon /usr/share/nginx/html
+COPY ./romofyi-html /usr/share/nginx/html
