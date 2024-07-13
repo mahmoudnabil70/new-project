@@ -3,21 +3,10 @@
   hosts: localhost
   connection: local
   tasks:
-    - name: stop current running container
-      command: docker stop web-container
-      ignore_errors: yes
-
-    - name: remove stopped container
-      command: docker rm web-container
-      ignore_errors: yes
-
-    - name: remove romofyi-html-image
-      command: docker rmi mahmoudnabil70
-      ignore_errors: yes
 
     - name: build docker image using the Dockerfile
-      command: docker build -t mahmoudnabil70 .
+      command: docker build -t romofyi-html-image .
 
     - name: run container
-      command: docker run -d --name web-container -p 8080:80 mahmoudnabil70
+      command: docker run -d --name web-container -p 8080:80 romofi-html-image
 
