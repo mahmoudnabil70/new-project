@@ -3,25 +3,21 @@
   hosts: localhost
   connection: local
   tasks:
-    - name: stop current running container
-      command: docker stop web-container
-      ignore_errors: yes
 
-    - name: remove stopped container
-      command: docker rm web-container
+    - name: stop docker containers
+      command: docker stop simple
       ignore_errors: yes
-
-    - name: remove romofyi-html-image
-      command: docker rmi mahmoudnabil70/testpipline
+      
+    - name: remove container 
+      command: docker rm simple
       ignore_errors: yes
-
+      
+    - name: remove docker image 
+      command: docker rmi -f project-img:latest
+      ignore_errors: yes
+      
     - name: build docker image using the Dockerfile
-      command: docker build -t mahmoudnabil70/testpipline .
-
-    - name: Push Image to dockerhub
-      command: docker push mahmoudnabil70/testpipline:tagname
+      command: docker build -t project-img .
 
     - name: run container
-      command: ocker run -d --name web-container -p 8080:80 mahmoudnabil70/testpipline-image
-    - name:
-      command: docker run -d --name web-container -p 8080:80 mahmoudnabil70/testpipline-image
+      command: docker run -d --name simple -p 8080:80 project-img
