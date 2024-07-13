@@ -13,13 +13,9 @@
       ignore_errors: yes
       
     - name: remove docker image 
-      command: docker rmi project-img
+      command: docker rmi -f project-img:latest
       ignore_errors: yes
       
-    - name: remove docker repo
-      command: docker rmi -f romofyi-html-image
-      ignore_errors: yes
-    
     - name: build docker image using the Dockerfile
       command: docker build -t project-img .
 
