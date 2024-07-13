@@ -3,7 +3,12 @@
   hosts: localhost
   connection: local
   tasks:
-
+    - name: stop docker containers
+      command: docker stop project-img
+    - name: remove container 
+      command: docker rm project-img
+    - name: remove docker image 
+      command: docker rmi project-img
     - name: build docker image using the Dockerfile
       command: docker build -t project-img .
 
