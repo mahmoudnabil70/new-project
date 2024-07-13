@@ -12,12 +12,12 @@
       ignore_errors: yes
 
     - name: remove romofyi-html-image
-      command: docker rmi mahmoudnabil70/testpipline
+      command: docker rmi mahmoudnabil70
       ignore_errors: yes
 
     - name: build docker image using the Dockerfile
-      command: docker build -t mahmoudnabil70/testpipline .
+      command: docker build -t mahmoudnabil70 .
 
     - name: run container
-      command: docker run -d --name web-container -p 8080:80 mahmoudnabil70/testpipline
+      command: docker run -d --name web-container -p 8080:80 mahmoudnabil70
 
