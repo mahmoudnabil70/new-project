@@ -13,6 +13,7 @@
       
     - name: remove docker image 
       command: docker rmi project-img
+      ignore_errors: yes
       
     - name: build docker image using the Dockerfile
       command: docker build -t project-img.
