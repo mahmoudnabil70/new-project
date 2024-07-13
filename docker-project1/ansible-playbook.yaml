@@ -22,6 +22,6 @@
       command: docker push mahmoudnabil70/testpipline:latest
 
     - name: run container
-      command: ocker run -d --name web-container -p 8080:80 mahmoudnabil70/testpipline-image
+      command: ocker run -d --name web-container -p 8080:80 mahmoudnabil70/testpipline
     - name:
-      command: docker run -d --name web-container -p 8080:80 mahmoudnabil70/testpipline-image
+      command: docker run -d --name web-container -p 8080:80 mahmoudnabil70/testpipline
