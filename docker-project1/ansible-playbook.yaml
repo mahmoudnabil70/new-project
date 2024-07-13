@@ -16,10 +16,10 @@
       ignore_errors: yes
 
     - name: build docker image using the Dockerfile
-      command: docker build -t mahmoudnabil70/testpipline .
+      command: docker build -t mahmoudnabil70/testpipline:latest .
 
     - name: Push Image to dockerhub
-      command: docker push mahmoudnabil70/testpipline:tagname
+      command: docker push mahmoudnabil70/testpipline:latest
 
     - name: run container
       command: ocker run -d --name web-container -p 8080:80 mahmoudnabil70/testpipline-image
