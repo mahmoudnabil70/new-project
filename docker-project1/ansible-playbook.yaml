@@ -6,7 +6,7 @@
     - name: stop docker containers
       command: docker stop simple
     - name: remove container 
-      command: docker rm project-img
+      command: docker rm simple
     - name: remove docker image 
       command: docker rmi project-img
     - name: build docker image using the Dockerfile
