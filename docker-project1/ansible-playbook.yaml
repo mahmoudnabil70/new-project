@@ -4,7 +4,7 @@
   connection: local
   tasks:
 
-      - name: stop docker containers
+    - name: stop docker containers
       command: docker stop simple
       ignore_errors: yes
       
