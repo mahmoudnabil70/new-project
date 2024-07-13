@@ -5,7 +5,7 @@
   tasks:
     - name: build docker image using the Dockerfile
       command: docker build -t project-img.
-  
+      
     - name: run container
       command: docker run -d --name simple -p 8080:80 project-img
 
