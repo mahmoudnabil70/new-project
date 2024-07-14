@@ -13,7 +13,7 @@ pipeline {
         stage('Build & push Dockerfile') {
             steps {
                 sh """
-                cd new-project/laravel-app
+                cd new-project/new-project
                 ansible-playbook playbook.yml
                 """
             }
@@ -21,7 +21,7 @@ pipeline {
         stage('Run Dockercompose playbook') {
             steps {
                 sh """
-                cd new-project/laravel-app
+                cd new-project/new-project
                 ansible-playbook playbook-dcompose.yml 
                 """
             }

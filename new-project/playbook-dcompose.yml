@@ -1,0 +1,15 @@
+---
+- name: "Run Docker-Compose using ansible playbook"
+  hosts: localhost
+  tasks:
+  - name: stop and remove containers
+    command: docker-compose down
+    ignore_errors: yes
+  
+  - name: remove image built with dockercompose
+    command: docker rmi -f mahmoudnabil70/nginx:latest
+    ignore_errors: yes
+
+  - name: build docker compose
+    command: docker compose up --build
+    
