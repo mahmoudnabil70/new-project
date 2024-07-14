@@ -11,5 +11,4 @@
     ignore_errors: yes
 
   - name: build docker compose
-    command: docker compose up --build
-    
+    command: docker compose up --build -d
