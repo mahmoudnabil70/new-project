@@ -7,7 +7,7 @@
     ignore_errors: yes
   
   - name: remove image built with dockercompose
-    command: docker rmi -f mahmoudnabil70/nginx:latest
+    command: docker rmi -f mahmoudnabil70/nginx:alpine3.19
     ignore_errors: yes
 
   - name: build docker compose
