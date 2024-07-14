@@ -7,7 +7,7 @@
     ignore_errors: yes
   
   - name: remove image built with dockercompose
-    command: docker rmi triple3a/laravel-app
+    command: docker rmi mahmoudnabil70/laravel-app
     ignore_errors: yes
 
   - name: remove php-apache image
@@ -19,7 +19,7 @@
     ignore_errors: yes
 
   - name: remove tagged mysql image
-    command: docker rmi triple3a/laravel-app-mysql-5.7
+    command: docker rmi mahmoudnabil70/laravel-app-mysql-5.7
     ignore_errors: yes
 
   - name: remove phpmyadmin image
@@ -27,7 +27,7 @@
     ignore_errors: yes
 
   - name: remove tagged phpmyadmin image
-    command: docker rmi triple3a/laravel-app-phpmyadmin
+    command: docker rmi mahmoudnabil70/laravel-app-phpmyadmin
     ignore_errors: yes
 
   - name: build docker-compose
@@ -38,19 +38,19 @@
     command: docker exec -i laravel-app_php-apache-environment_1 bash -c "composer update"
 
   - name: push php-apache image to dockerhub
-    command: docker push triple3a/laravel-app 
+    command: docker push mahmoudnabil70/laravel-app 
     
   - name: tag mysql image
     command: docker tag mysql:5.7 triple3a/laravel-app-mysql-5.7 
 
   - name: push mysql image to dockerhub
-    command: docker push triple3a/laravel-app-mysql-5.7 
+    command: docker push mahmoudnabil70/laravel-app-mysql-5.7 
 
   - name: tag phpmyadmin image
     command: docker tag phpmyadmin/phpmyadmin triple3a/laravel-app-phpmyadmin 
 
   - name: push phpmyadmin image to dockerhub
-    command: docker push triple3a/laravel-app-phpmyadmin
+    command: docker push mahmoudnabil70/laravel-app-phpmyadmin
 
 
 
