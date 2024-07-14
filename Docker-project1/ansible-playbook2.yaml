@@ -1,0 +1,17 @@
+---
+- name: "Remove a container with ansible"
+  hosts: localhost
+  connection: local
+  tasks:
+
+    - name: stop docker containers
+      command: docker stop simple
+      ignore_errors: yes
+      
+    - name: remove container 
+      command: docker rm simple
+      ignore_errors: yes
+      
+    - name: remove docker image 
+      command: docker rmi -f project-img:latest
+      ignore_errors: yes
