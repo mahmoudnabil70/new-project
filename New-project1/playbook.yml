@@ -11,7 +11,7 @@
     ignore_errors: yes
   
   - name: remove used image
-    command: docker rmi nginx:alpine3.19
+    command: docker rmi -f nginx:alpine3.19
     ignore_errors: yes
 
   - name: build docker image from dockerfile
