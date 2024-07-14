@@ -51,7 +51,3 @@
 
   - name: push phpmyadmin image to dockerhub
     command: docker push mahmoudnabil70/laravel-app-phpmyadmin
-
-
-
-
